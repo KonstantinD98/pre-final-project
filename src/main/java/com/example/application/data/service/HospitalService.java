@@ -15,14 +15,14 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CrmService {
+public class HospitalService {
 
     private final DoctorRepository doctorRepository;
     private final HospitalRepository hospitalRepository;
     private final TypeRepository typeRepository;
     private final PatientRepository patientRepository;
 
-    public CrmService(DoctorRepository doctorRepository,
+    public HospitalService(DoctorRepository doctorRepository,
                       HospitalRepository hospitalRepository,
                       TypeRepository typeRepository,
                       PatientRepository patientRepository) {

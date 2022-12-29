@@ -13,17 +13,17 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ListViewTest {
+public class DoctorViewTest {
 
     @Autowired
-    private ListView listView;
+    private DoctorView DoctorView;
 
     @Test
     public void formShownWhenDoctorSelected() {
-        Grid<Doctor> grid = listView.grid;
+        Grid<Doctor> grid = DoctorView.grid;
         Doctor firstDoctor = getFirstItem(grid);
 
-        DoctorForm form = listView.form;
+        DoctorForm form = DoctorView.form;
 
         Assert.assertFalse(form.isVisible());
         grid.asSingleSelect().setValue(firstDoctor);

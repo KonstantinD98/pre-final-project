@@ -3,7 +3,7 @@ package com.example.application.views.list;
 
 import com.example.application.data.entity.Doctor;
 
-import com.example.application.data.service.CrmService;
+import com.example.application.data.service.HospitalService;
 import com.example.application.views.MainLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -25,14 +25,14 @@ import javax.annotation.security.PermitAll;
 @Route(value="", layout = MainLayout.class)
 @PageTitle("Doctors | Vaadin CRM")
 @PermitAll
-public class ListView extends VerticalLayout {
+public class DoctorView extends VerticalLayout {
     Grid<Doctor> grid = new Grid<>(Doctor.class);
     TextField filterText = new TextField();
     DoctorForm form;
-    CrmService service;
+    HospitalService service;
 
 
-    public ListView(CrmService service) {
+    public DoctorView(HospitalService service) {
         this.service = service;
         addClassName("list-view");
         setSizeFull();
